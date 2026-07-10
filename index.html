@@ -3,130 +3,257 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WinIBW4-Scripte</title>
+  <title>WinIBW4-Scripte – Zeitschriftendatenbank</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --teal:        #007f82;
+      --teal-dark:   #005f62;
+      --teal-light:  #e6f4f4;
+      --accent:      #c0392b;
+      --text:        #222222;
+      --muted:       #555555;
+      --border:      #d0dfe0;
+      --bg:          #ffffff;
+      --bg-alt:      #f4f8f8;
+    }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #f5f7fa;
-      color: #222;
+      font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
 
-    header {
-      background: #003366;
+    /* ── Top bar ── */
+    .topbar {
+      background: var(--teal);
       color: #fff;
-      padding: 2rem 1.5rem 1.5rem;
-      text-align: center;
+      font-size: 0.8rem;
+      padding: 0.35rem 1.5rem;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.25rem;
     }
+    .topbar a { color: #cceaea; text-decoration: none; }
+    .topbar a:hover { text-decoration: underline; }
 
+    /* ── Header / Hero ── */
+    header {
+      background: var(--teal);
+      color: #fff;
+      padding: 2.5rem 1.5rem 2rem;
+    }
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .org-label {
+      font-size: 0.85rem;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-bottom: 0.4rem;
+    }
     header h1 {
-      font-size: 2rem;
-      letter-spacing: 0.02em;
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
     }
-
-    header p {
+    header .subtitle {
       margin-top: 0.5rem;
-      font-size: 1.1rem;
-      opacity: 0.85;
+      font-size: 1.05rem;
+      font-weight: 300;
+      opacity: 0.9;
     }
 
+    /* ── Breadcrumb bar ── */
+    .breadcrumb {
+      background: var(--teal-dark);
+      padding: 0.5rem 1.5rem;
+    }
+    .breadcrumb-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 0.85rem;
+      color: #cceaea;
+    }
+    .breadcrumb a { color: #cceaea; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { opacity: 0.6; margin: 0 0.4rem; }
+
+    /* ── Main content ── */
     main {
       flex: 1;
-      max-width: 860px;
+      max-width: 900px;
       margin: 2.5rem auto;
-      padding: 0 1.25rem;
+      padding: 0 1.5rem;
       width: 100%;
     }
 
-    section {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      padding: 1.75rem 2rem;
-      margin-bottom: 1.75rem;
+    .intro {
+      border-left: 4px solid var(--teal);
+      padding: 0.75rem 1.25rem;
+      background: var(--teal-light);
+      border-radius: 0 4px 4px 0;
+      margin-bottom: 2.5rem;
+      color: var(--muted);
+      font-size: 0.97rem;
     }
 
-    section h2 {
-      font-size: 1.25rem;
-      color: #003366;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #e0e7ef;
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--teal-dark);
+      margin-bottom: 0.75rem;
       padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--border);
     }
 
-    section p {
-      line-height: 1.7;
-      color: #444;
+    .section-block {
+      margin-bottom: 2.25rem;
     }
 
+    .section-block p {
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    /* ── Button ── */
     .btn {
       display: inline-block;
-      margin-top: 1.25rem;
-      padding: 0.6rem 1.4rem;
-      background: #003366;
+      margin-top: 1rem;
+      padding: 0.55rem 1.3rem;
+      background: var(--teal);
       color: #fff;
-      border-radius: 5px;
+      border-radius: 3px;
       text-decoration: none;
-      font-size: 0.95rem;
-      transition: background 0.2s;
+      font-size: 0.93rem;
+      font-weight: 600;
+      transition: background 0.18s;
+    }
+    .btn:hover { background: var(--teal-dark); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--teal);
+      border: 2px solid var(--teal);
+      margin-left: 0.5rem;
+    }
+    .btn-outline:hover { background: var(--teal-light); color: var(--teal-dark); }
+
+    /* ── Divider ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
     }
 
-    .btn:hover { background: #00509e; }
-
+    /* ── Footer ── */
     footer {
-      text-align: center;
-      padding: 1.25rem;
+      background: var(--teal-dark);
+      color: #cceaea;
+      padding: 1.5rem;
       font-size: 0.85rem;
-      color: #888;
-      border-top: 1px solid #e0e7ef;
+      text-align: center;
     }
-
-    footer a { color: #003366; text-decoration: none; }
+    footer a { color: #fff; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
+    footer .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    footer .footer-links {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Top utility bar -->
+  <div class="topbar">
+    <a href="https://zdb-katalog.de" target="_blank">ZDB-Katalog</a>
+    <a href="https://www.dnb.de" target="_blank">Deutsche Nationalbibliothek</a>
+    <a href="https://github.com/Zeitschriftendatenbank" target="_blank">GitHub</a>
+  </div>
+
+  <!-- Header -->
   <header>
-    <h1>WinIBW4-Scripte</h1>
-    <p>Übersicht der Scripte für die WinIBW4</p>
+    <div class="header-inner">
+      <div class="org-label">Zeitschriftendatenbank</div>
+      <h1>WinIBW4-Scripte</h1>
+      <p class="subtitle">Übersicht der Scripte für die WinIBW4</p>
+    </div>
   </header>
 
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="https://github.com/Zeitschriftendatenbank">Zeitschriftendatenbank</a>
+      <span>›</span>
+      <a href="https://github.com/Zeitschriftendatenbank/WinIBW4-Scripte">WinIBW4-Scripte</a>
+    </div>
+  </nav>
+
+  <!-- Main -->
   <main>
-    <section>
-      <h2>Über dieses Projekt</h2>
+
+    <div class="intro">
+      Diese Seite bietet eine Übersicht der Scripte für die WinIBW4, die von der Zeitschriftendatenbank (ZDB)
+      entwickelt und gepflegt werden.
+    </div>
+
+    <div class="section-block">
+      <h2>Über das Projekt</h2>
       <p>
-        Diese Seite bietet eine Übersicht der Scripte für die WinIBW4,
-        die im Rahmen der Zeitschriftendatenbank (ZDB) entwickelt und gepflegt werden.
-        Die Scripte erleichtern die tägliche Arbeit in der WinIBW4-Oberfläche und
-        stehen zur freien Nutzung und Weiterentwicklung bereit.
+        Die WinIBW4-Scripte erleichtern die tägliche Arbeit in der WinIBW4-Oberfläche.
+        Sie stehen zur freien Nutzung und Weiterentwicklung bereit und werden auf GitHub verwaltet.
       </p>
       <a class="btn" href="https://github.com/Zeitschriftendatenbank/WinIBW4-Scripte" target="_blank">
-        → Zur GitHub-Repository
+        Zur GitHub-Repository
       </a>
-    </section>
+      <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/WinIBW4-Scripte/issues" target="_blank">
+        Issues &amp; Anfragen
+      </a>
+    </div>
 
-    <section>
+    <hr />
+
+    <div class="section-block">
       <h2>Mitmachen</h2>
       <p>
-        Neue Scripte, Verbesserungen oder Fehlerkorrekturen können über GitHub als
-        Pull Request eingereicht werden. Fragen und Anregungen sind im
-        Issue-Tracker willkommen.
+        Neue Scripte, Verbesserungen oder Fehlerkorrekturen können über GitHub als Pull Request eingereicht werden.
+        Fragen und Anregungen sind im Issue-Tracker willkommen.
       </p>
-    </section>
+    </div>
+
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>
-      &copy; <span id="year"></span>
-      <a href="https://github.com/Zeitschriftendatenbank" target="_blank">Zeitschriftendatenbank</a>
-      &nbsp;·&nbsp;
-      <a href="https://github.com/Zeitschriftendatenbank/WinIBW4-Scripte" target="_blank">GitHub</a>
-    </p>
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> Zeitschriftendatenbank (ZDB)</p>
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="https://zdb-katalog.de" target="_blank">ZDB-Katalog</a>
+        <a href="https://github.com/Zeitschriftendatenbank/WinIBW4-Scripte" target="_blank">GitHub-Repository</a>
+        <a href="https://github.com/Zeitschriftendatenbank/WinIBW4-Scripte/issues" target="_blank">Issues</a>
+      </nav>
+    </div>
   </footer>
 
   <script>
