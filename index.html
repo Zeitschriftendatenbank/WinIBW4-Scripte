@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WinIBW4-Scripte</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #003366;
+      color: #fff;
+      padding: 2rem 1.5rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 0.02em;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+
+    main {
+      flex: 1;
+      max-width: 860px;
+      margin: 2.5rem auto;
+      padding: 0 1.25rem;
+      width: 100%;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.75rem;
+    }
+
+    section h2 {
+      font-size: 1.25rem;
+      color: #003366;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #e0e7ef;
+      padding-bottom: 0.4rem;
+    }
+
+    section p {
+      line-height: 1.7;
+      color: #444;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1.25rem;
+      padding: 0.6rem 1.4rem;
+      background: #003366;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    .btn:hover { background: #00509e; }
+
+    footer {
+      text-align: center;
+      padding: 1.25rem;
+      font-size: 0.85rem;
+      color: #888;
+      border-top: 1px solid #e0e7ef;
+    }
+
+    footer a { color: #003366; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>WinIBW4-Scripte</h1>
+    <p>Übersicht der Scripte für die WinIBW4</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Über dieses Projekt</h2>
+      <p>
+        Diese Seite bietet eine Übersicht der Scripte für die WinIBW4,
+        die im Rahmen der Zeitschriftendatenbank (ZDB) entwickelt und gepflegt werden.
+        Die Scripte erleichtern die tägliche Arbeit in der WinIBW4-Oberfläche und
+        stehen zur freien Nutzung und Weiterentwicklung bereit.
+      </p>
+      <a class="btn" href="https://github.com/Zeitschriftendatenbank/WinIBW4-Scripte" target="_blank">
+        → Zur GitHub-Repository
+      </a>
+    </section>
+
+    <section>
+      <h2>Mitmachen</h2>
+      <p>
+        Neue Scripte, Verbesserungen oder Fehlerkorrekturen können über GitHub als
+        Pull Request eingereicht werden. Fragen und Anregungen sind im
+        Issue-Tracker willkommen.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="year"></span>
+      <a href="https://github.com/Zeitschriftendatenbank" target="_blank">Zeitschriftendatenbank</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/Zeitschriftendatenbank/WinIBW4-Scripte" target="_blank">GitHub</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
