@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WinIBW4-Scripte – Zeitschriftendatenbank</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
     /* ── App-Store Grid ── */
@@ -16,8 +18,11 @@
       gap: 1.5rem;
       margin-top: 1.25rem;
     }
+
     @media (max-width: 640px) {
-      .grid { grid-template-columns: 1fr; }
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .card {
@@ -27,11 +32,12 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
       transition: box-shadow 0.2s, transform 0.2s;
     }
+
     .card:hover {
-      box-shadow: 0 6px 20px rgba(0,127,130,0.15);
+      box-shadow: 0 6px 20px rgba(0, 127, 130, 0.15);
       transform: translateY(-2px);
     }
 
@@ -44,12 +50,14 @@
       justify-content: center;
       overflow: hidden;
     }
+
     .card-screenshot img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
+
     .card-screenshot .placeholder-icon {
       font-size: 3rem;
     }
@@ -84,6 +92,7 @@
       background: var(--teal-light);
       color: var(--teal-dark);
     }
+
     .card-badge.private {
       background: #fef3cd;
       color: #7a5c00;
@@ -103,16 +112,19 @@
       padding: 0.75rem 1.25rem 1rem;
       border-top: 1px solid var(--border);
     }
+
     .card-actions .btn {
       margin: 0;
       font-size: 0.85rem;
       padding: 0.4rem 1rem;
     }
+
     .card-actions .btn-outline {
       margin: 0;
     }
   </style>
 </head>
+
 <body>
 
   <!-- Top utility bar -->
@@ -160,12 +172,16 @@
         <div class="card-body">
           <h3 class="card-title">WinIBW4-ZDB</h3>
           <div class="card-badges"><span class="card-badge">JavaScript</span></div>
-          <p class="card-desc">ZDB-Scripte für die WinIBW4. Das zentrale Script-Paket der Zeitschriftendatenbank für die WinIBW4-Oberfläche.</p>
+          <p class="card-desc">ZDB-Scripte für die WinIBW4. Das zentrale Script-Paket der Zeitschriftendatenbank für die
+            WinIBW4-Oberfläche.</p>
         </div>
         <div class="card-actions">
-          <a class="btn" href="https://github.com/Zeitschriftendatenbank/WinIBW4-ZDB/archive/refs/heads/dev.zip">⬇ Download</a>
-          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/WinIBW4-ZDB" target="_blank">GitHub</a>
-          <a class="btn btn-outline" href="https://zeitschriftendatenbank.github.io/WinIBW4-ZDB/" target="_blank">Docs</a>
+          <a class="btn" href="https://github.com/Zeitschriftendatenbank/WinIBW4-ZDB/archive/refs/heads/dev.zip">⬇
+            Download</a>
+          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/WinIBW4-ZDB"
+            target="_blank">GitHub</a>
+          <a class="btn btn-outline" href="https://zeitschriftendatenbank.github.io/WinIBW4-ZDB/"
+            target="_blank">Docs</a>
         </div>
       </div>
 
@@ -177,11 +193,14 @@
         <div class="card-body">
           <h3 class="card-title">excelTool</h3>
           <div class="card-badges"><span class="card-badge">JavaScript</span></div>
-          <p class="card-desc">WinIBW4 excelTool – ermöglicht den Export und die Verarbeitung von Daten aus der WinIBW4 in Excel-kompatible Formate.</p>
+          <p class="card-desc">WinIBW4 excelTool – ermöglicht den Export und die Verarbeitung von Daten aus der WinIBW4
+            in Excel-kompatible Formate.</p>
         </div>
         <div class="card-actions">
-          <a class="btn" href="https://github.com/Zeitschriftendatenbank/excelTool/archive/refs/heads/main.zip">⬇ Download</a>
-          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/excelTool" target="_blank">GitHub</a>
+          <a class="btn" href="https://github.com/Zeitschriftendatenbank/excelTool/archive/refs/heads/main.zip">⬇
+            Download</a>
+          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/excelTool"
+            target="_blank">GitHub</a>
         </div>
       </div>
 
@@ -193,11 +212,15 @@
         <div class="card-body">
           <h3 class="card-title">csvImportTemplate</h3>
           <div class="card-badges"><span class="card-badge">JavaScript</span></div>
-          <p class="card-desc">Template-Importtool für die WinIBW4 – erleichtert den strukturierten Import von CSV-Daten in die WinIBW4.</p>
+          <p class="card-desc">Template-Importtool für die WinIBW4 – erleichtert den strukturierten Import von CSV-Daten
+            in die WinIBW4.</p>
         </div>
         <div class="card-actions">
-          <a class="btn" href="https://github.com/Zeitschriftendatenbank/csvImportTemplate/archive/refs/heads/main.zip">⬇ Download</a>
-          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/csvImportTemplate" target="_blank">GitHub</a>
+          <a class="btn"
+            href="https://github.com/Zeitschriftendatenbank/csvImportTemplate/archive/refs/heads/main.zip">⬇
+            Download</a>
+          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/csvImportTemplate"
+            target="_blank">GitHub</a>
         </div>
       </div>
 
@@ -209,11 +232,14 @@
         <div class="card-body">
           <h3 class="card-title">WinIBW-Set</h3>
           <div class="card-badges"><span class="card-badge">JavaScript</span></div>
-          <p class="card-desc">Works perfectly on WinIBW-Sets – Werkzeuge zur komfortablen Arbeit mit Treffermengen (Sets) in der WinIBW.</p>
+          <p class="card-desc">Works perfectly on WinIBW-Sets – Werkzeuge zur komfortablen Arbeit mit Treffermengen
+            (Sets) in der WinIBW.</p>
         </div>
         <div class="card-actions">
-          <a class="btn" href="https://github.com/Zeitschriftendatenbank/WinIBW-Set/archive/refs/heads/main.zip">⬇ Download</a>
-          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/WinIBW-Set" target="_blank">GitHub</a>
+          <a class="btn" href="https://github.com/Zeitschriftendatenbank/WinIBW-Set/archive/refs/heads/main.zip">⬇
+            Download</a>
+          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/WinIBW-Set"
+            target="_blank">GitHub</a>
         </div>
       </div>
 
@@ -225,11 +251,14 @@
         <div class="card-body">
           <h3 class="card-title">WinIBW-LOGGER</h3>
           <div class="card-badges"><span class="card-badge">JavaScript</span></div>
-          <p class="card-desc">Logger für die WinIBW – protokolliert Aktionen und Ereignisse in der WinIBW zur Fehleranalyse und Nachvollziehbarkeit.</p>
+          <p class="card-desc">Logger für die WinIBW – protokolliert Aktionen und Ereignisse in der WinIBW zur
+            Fehleranalyse und Nachvollziehbarkeit.</p>
         </div>
         <div class="card-actions">
-          <a class="btn" href="https://github.com/Zeitschriftendatenbank/WinIBW-LOGGER/archive/refs/heads/main.zip">⬇ Download</a>
-          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/WinIBW-LOGGER" target="_blank">GitHub</a>
+          <a class="btn" href="https://github.com/Zeitschriftendatenbank/WinIBW-LOGGER/archive/refs/heads/main.zip">⬇
+            Download</a>
+          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/WinIBW-LOGGER"
+            target="_blank">GitHub</a>
         </div>
       </div>
 
@@ -241,11 +270,14 @@
         <div class="card-body">
           <h3 class="card-title">WinIBW-notify</h3>
           <div class="card-badges"><span class="card-badge">JavaScript</span></div>
-          <p class="card-desc">Notify instead of messageBox – ersetzt störende modale Dialogboxen durch moderne, nicht-blockierende Benachrichtigungen.</p>
+          <p class="card-desc">Notify instead of messageBox – ersetzt störende modale Dialogboxen durch moderne,
+            nicht-blockierende Benachrichtigungen.</p>
         </div>
         <div class="card-actions">
-          <a class="btn" href="https://github.com/Zeitschriftendatenbank/WinIBW-notify/archive/refs/heads/main.zip">⬇ Download</a>
-          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/WinIBW-notify" target="_blank">GitHub</a>
+          <a class="btn" href="https://github.com/Zeitschriftendatenbank/WinIBW-notify/archive/refs/heads/main.zip">⬇
+            Download</a>
+          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/WinIBW-notify"
+            target="_blank">GitHub</a>
         </div>
       </div>
 
@@ -257,11 +289,15 @@
         <div class="card-body">
           <h3 class="card-title">WinIBW-testrunner</h3>
           <div class="card-badges"><span class="card-badge">JavaScript</span></div>
-          <p class="card-desc">Test-Framework für WinIBW4-Scripte – ermöglicht das automatisierte Testen von Scripten direkt in der WinIBW4-Umgebung.</p>
+          <p class="card-desc">Test-Framework für WinIBW4-Scripte – ermöglicht das automatisierte Testen von Scripten
+            direkt in der WinIBW4-Umgebung.</p>
         </div>
         <div class="card-actions">
-          <a class="btn" href="https://github.com/Zeitschriftendatenbank/WinIBW-testrunner/archive/refs/heads/main.zip">⬇ Download</a>
-          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/WinIBW-testrunner" target="_blank">GitHub</a>
+          <a class="btn"
+            href="https://github.com/Zeitschriftendatenbank/WinIBW-testrunner/archive/refs/heads/main.zip">⬇
+            Download</a>
+          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/WinIBW-testrunner"
+            target="_blank">GitHub</a>
         </div>
       </div>
 
@@ -276,10 +312,15 @@
             <span class="card-badge">JavaScript</span>
             <span class="card-badge private">Intern</span>
           </div>
-          <p class="card-desc">Frequently used functions for the WinIBW – eine Sammlung häufig genutzter Hilfsfunktionen als gemeinsame Basis für andere Scripte.</p>
+          <p class="card-desc">Frequently used functions for the WinIBW – eine Sammlung häufig genutzter Hilfsfunktionen
+            als gemeinsame Basis für andere Scripte.</p>
         </div>
         <div class="card-actions">
-          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/winibw-misc" target="_blank">GitHub</a>
+          <a class="btn" href="https://github.com/Zeitschriftendatenbank/winibw-misc/archive/refs/heads/main.zip">⬇
+            Download</a>
+
+          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/winibw-misc"
+            target="_blank">GitHub</a>
         </div>
       </div>
 
@@ -291,11 +332,14 @@
         <div class="card-body">
           <h3 class="card-title">WinIBW-CSV-API</h3>
           <div class="card-badges"><span class="card-badge">JavaScript</span></div>
-          <p class="card-desc">CSV-API script for WinIBW3 – stellt eine API bereit, die Daten aus der WinIBW als CSV exportiert und weiterverarbeitet.</p>
+          <p class="card-desc">CSV-API script for WinIBW3 – stellt eine API bereit, die Daten aus der WinIBW als CSV
+            exportiert und weiterverarbeitet.</p>
         </div>
         <div class="card-actions">
-          <a class="btn" href="https://github.com/Zeitschriftendatenbank/WinIBW-CSV-API/archive/refs/heads/master.zip">⬇ Download</a>
-          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/WinIBW-CSV-API" target="_blank">GitHub</a>
+          <a class="btn" href="https://github.com/Zeitschriftendatenbank/WinIBW-CSV-API/archive/refs/heads/master.zip">⬇
+            Download</a>
+          <a class="btn btn-outline" href="https://github.com/Zeitschriftendatenbank/WinIBW-CSV-API"
+            target="_blank">GitHub</a>
         </div>
       </div>
 
@@ -319,4 +363,5 @@
   </script>
 
 </body>
+
 </html>
